@@ -1,0 +1,313 @@
+$primaryColor: #ffffff
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+header
+	padding: 80px
+.wrapper
+	background: url('../img/ocean.jpg') no-repeat
+	background-size: 100%
+	min-height: 740px
+.header	
+	&__logo
+		color: $primaryColor
+		font-weight: bold
+		font-size: 30px
+		text-transform: uppercase
+		display: inline
+		margin-right: 400px
+		
+	&__nav
+		display: inline-block
+		// margin-left: 500px
+		ul
+			display: flex
+			justify-content: flex-end
+			list-style: none
+
+		li	
+			margin: 0 20px
+			
+		a 
+			color: $primaryColor	
+			padding: 0 15px
+		a:hover
+			color: $primaryColor
+			text-decoration: none
+			border: 1px solid #ffffff
+			border-radius: 10px
+
+.article
+	margin-top: 100px
+
+	h1,p
+		text-align: center	
+		color: $primaryColor
+		font-weight: lighter
+	h1
+		margin-bottom: 50px
+		word-spacing: 10px	
+		letter-spacing: 5px
+.content
+	margin-top: 115px
+	&__more
+			
+		
+	a 
+		text-decoration: none
+		color: #333b46	
+		padding: 5px 15px
+		text-decoration: none
+		border: 1px solid #333b46
+		border-radius: 20px	
+	a:hover
+		text-decoration: none
+		color: #333b46
+	h3
+		font-weight: lighter
+		color: #333b46	
+		letter-spacing: 3px
+	p
+		color: #81868e
+.tagline
+	text-align: center
+	color: #81868e
+	// margin-top: 80px
+	margin-bottom: 60px
+	
+	&__h	
+		word-spacing: 10px	
+		letter-spacing: 5px	
+		font-weight: lighter
+		color: #333b46	
+		margin-bottom: 40px
+.fon
+	background: #f3f3f3		
+	margin-top: 100px
+	padding-bottom: 100px
+	padding-top: 80px
+	p
+		color: #81868e
+			
+	h5
+		margin-bottom: 40px	
+		word-spacing: 10px	
+		letter-spacing: 5px	
+		font-weight: lighter
+		color: #333b46	
+.block	
+	display: flex	
+	b
+		color: #636971
+	&__color
+		color: #19bd9a
+		font-weight: bold
+	&__block-1
+		flex: 0 0 30%
+	&__block-2
+		flex: 0 0 50%	
+		margin-left: 150px
+
+.icon-center
+	width: 280px
+	margin-left: auto
+	margin-right: auto	
+.icon
+	width: 50px
+	height: 50px
+	background: #81868e
+	border-radius: 50%
+	&__first
+		margin: 12px 13px 13px 11px
+	&__second
+		margin: 14px 15px 11px 13px
+	&__third
+		margin: 10px 12px 17px 11px
+	&__fourth
+		margin: 13px 10px 14px 16px
+	&__margin
+		margin-top: 20px	
+.icon:hover
+	background: #19bd9a
+.align
+	display: inline-block
+	margin: 65px 20px
+.heard
+	margin: 16px 15px 14px 13px	
+.mouse
+	margin: 9px 19px 14px 18px	
+.light-buld
+	margin: 11px 17px 12px 16px	
+.detalis
+	h4,p
+		text-align: center
+.project
+	padding-top: 80px
+	padding-bottom: 65px
+.gallery
+	display: flex
+	height: 320px
+	img
+		width: 100%
+		height: 100%
+	&__card1
+		flex: 0 0 50%
+	&__card2
+		flex: 0 0 25%
+	&__card3	
+		flex: 0 0 25%	
+// .card:hover
+// 	background: black
+// 	opacity: 0.9	
+.section__fon
+	background: url('../img/sneakers.jpg') no-repeat	
+	background-size: 100%
+	height: 120px
+	padding-top: 5vh
+	position: relative
+
+	p
+		color: white
+		font-size: 20px
+		display: inline-block
+		margin-right: 160px
+		font-weight: lighter
+		letter-spacing: 2px
+		position: absolut
+.btn
+	display: inline-block
+	a			
+		color: white 
+		text-decoration: none
+		padding: 5px 15px
+		text-decoration: none
+		border: 1px solid white
+		border-radius: 20px
+		position: absolut
+	a:hover
+		text-decoration: none	
+		color: white
+.section__icon
+
+.box 	
+	padding-top: 80px
+	padding-bottom: 80px
+	p
+		color: #81868e
+.interest
+	margin-top: 70px
+
+	&__section
+		width: 120px
+		height: 120px
+		border: 3px solid #19bd9a
+		margin-right: 25px
+		padding: 45px 45px
+		border-radius: 50%
+		color: #81868e
+.black_fon
+	background: url('../img/B&W.png') no-repeat
+	background-size: 100%	
+	height: 390px
+	position: relative
+	img
+		position: absolut
+		top: -180px
+		right: 80px	
+.announcement	
+	color: white
+	span
+		color: #1aa88a
+
+	h5
+		margin-bottom: 50px 
+		margin-top: 50px
+		text-transform: uppercase
+		font-weight: lighter
+		color: white
+	img
+		position: absolut
+.portfolio	
+	padding-top: 80px
+	&__presents	
+		ul
+			display: flex
+			justify-content: center
+		li
+			list-style: none
+			margin: 40px
+		a
+			color: black
+		a:hover
+			padding-bottom: 10px
+			text-decoration: none	
+			color: black
+			border-bottom: 2px solid #1aa88a
+			// text-transform: uppercase
+	&__foto
+		max-height: 961px
+		display: flex
+		// flex: 0 0 30%
+		flex-wrap: wrap
+		flex-direction: column
+		align-items: flex-start
+		img	
+			margin-bottom: 10px
+.bg			
+	background: url('../img/habitables.jpg') no-repeat
+	width: 270px	
+	height: 374px
+	margin-bottom: 10px
+	padding: 100px 40px
+	h5
+		color: #1aa88a
+		margin-bottom: 20px
+	p	
+		color: white
+		font-weight: lighter
+.lg		
+	display: inline-block
+	margin-top: 50px
+	margin-left: 20px
+	width: 30px
+	height: 30px
+	background: black
+	border-radius: 50% 
+	padding: 8px
+.wrap	
+	background: url('../img/fons.jpg') no-repeat
+	min-height: 200px
+	max-width: 1105px
+	padding: 70px
+	margin-top: 40px
+	p
+		color: white
+		text-align: center
+		font-weight: lighter
+		letter-spacing: 2px
+		padding-bottom: 20px
+	
+			
+		
+
+
+
+		
+
+
+	
+
+
+
+		
+
+				
+			
+
+
+
+
+				
