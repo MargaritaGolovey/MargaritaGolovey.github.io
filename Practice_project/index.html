@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width:1920">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@600&display=swap" rel="stylesheet">
+    </head>
+<body>
+        <header class="header">
+            <div class="header-number"><img src="img/header_phone.svg" alt="number">+1 (824) 765 28 20</div>
+            <div class="header-location"><img src="img/header_location.svg" alt="location">г. Киев, ул. Петра Алексеева, д. 6</div>
+            <div class="header-schedule"><img src="img/header_time.svg" alt="schedule">Ежедневно с 10:00 до 19:00</div>
+        </header>
+    <div class="wrapper"> 
+       <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="" class="nav-list__link">Каталог</a></li>   
+            <li><a href="" class="nav-list__link">Оплата и доставка</a></li>  
+            <li><a href="" class="nav-list__link">Бонусная программа</a></li>   
+            <li><a href="" class="nav-list__link">О компании</a></li>  
+            <li><a href="" class="nav-list__link">Контакты</a></li>   
+
+         </ul>   
+    <div class="nav-logo">
+        <img src="img/logo.png" alt="">
+    </div>
+    <ul class="nav-section">
+        <li><a href="" class="section__search">Поиск товара<img src="img/nav_search.svg" alt=""></a></li>
+        <li><a href="" class="section__enter"><img src="img/nav_human.svg" alt=""> Войти</a></li>
+        <li><a href="" class="section__favorites"><img src="img/nav_heart.svg" alt="">Избранное</a></li>
+        <li><a href="basket.html" class="section__bascet"><img src="img/nav_basket.svg" alt="">Корзина</a></li>
+    </ul>
+    </nav>
+
+    <section class="slider">
+         <div class="slider-fon">
+        <!-- <span class="slider-circularText">Хит продаж Хит продаж</span> -->
+
+        <div class="picture">
+            <img src="img/knitting_green.png" alt="" class="picture-knitting  picture-knitting_green">
+            <img src="img/knitting_pink.png" alt="" class="picture-knitting picture-knitting_pink">
+            <img src="img/knitting_red.png" alt="" class="picture-knitting  picture-knitting_red">
+        </div>  
+
+        <div class="slider-arrow"><img src="img/arrow.svg" alt=""></div>
+
+        <h2>Пряжа Macrametr</h2>
+
+        <article class="slider-article">Повседневная практика показывает, что укрепление и развитие внутренней структуры обеспечивает широкому кругу (специалистов) участие в формировании форм воздействия. </article>
+        
+        <div class="slider-button">
+            <a href="#catalog">В каталог</a>
+        </div>
+
+        <div class="slider-toggle">
+            <img src="img/arrow_left.svg" alt="">
+                <div class="slider-toggle_number">1/5</div> 
+            <img src="img/arrow_right.svg" alt="">
+        </div>
+        </div>
+    </section>
+    <section class="way">Главная<img src="img/Arrow_location.svg" alt="">Каталог<img src="img/Arrow_location.svg" alt="">Макраме</section>
+
+    <main class="main">
+
+        <div class="main-sorting">
+            <button class="main-sorting_section" id="sortingHight"><span>Цена</span><img src="img/arrow_sorting_bottom.svg" alt=""></button>
+            <button class="main-sorting_section"><span>Цена</span><img src="img/arrow_sorting_top.svg" alt=""></button>
+        </div>
+
+        <div class="main-filter">
+            <h4>Тип изделий</h4>
+            <form name="filter">                
+                    <p><label><input id="rope" type="checkbox">Шпагат, шнуры, веревки</label></p>
+                    <p><label><input id="rings" type="checkbox">Кольца, бусины</label></p>
+                    <p><label><input id="jute" type="checkbox">Джут</label></p>
+              </form>
+
+              <h4>Состав</h4>
+              <form name="filter">                
+                      <p><label><input id="cotton" type="checkbox">Хлопок</label></p>
+                      <p><label><input id="syntetic" type="checkbox">Синтетика</label></p>
+                      <p><label><input id="heart" type="checkbox">С сердечником</label></p>
+                </form>  
+
+                <h4>Диаметр</h4>
+                <form name="filter">                
+                        <p><label><input id="3" type="checkbox">3 мм</label></p>
+                        <p><label><input id="4" type="checkbox">4 мм</label></p>
+                        <p><label><input id="4.5" type="checkbox">4,5 мм</label></p>
+                        <p><label><input id="5" type="checkbox">5 мм</label></p>
+                  </form>  
+                
+                  <h4>Производитель</h4>
+                  <form class="lastForm" name="filter">                
+                          <p><label><input id="Macrametr" type="checkbox">Macrametr</label></p>
+                          <p><label><input id="marshmallow" type="checkbox">Зефирка</label></p>
+                          <p><label><input id="gamm" type="checkbox">Гамма</label></p>
+                          <p><label><input id="sib" type="checkbox">Сибшнур</label></p>
+                    </form>   
+             <a href="" class="button">Показать</a>
+             <a href="">Очистить</a>
+        </div>
+  
+        <div id="catalog" class="main-catalog">
+            <div class="main-catalog_prodact">
+                <div class="main-catalogHeart">
+                    <img src="img/heart_prodact.svg" alt="">
+                    <img src="img/Group.svg" alt="">
+                </div>
+                <img src="img/product_Шпагат_Macrametr_4 мм_100нитей.png" style="margin: 25px 0" alt="" class="prodact-foto">
+                <div class="position">
+                <a href="card.html">Шпагат Macrametr <br> 4 мм, 100 нитей</a>
+                <div class="product-color">
+                    <div class="product-col" style="background: #696837;"></div> 
+                    <div class="product-col" style="background: #81292F;"></div>
+                    <div class="product-col" style="background: #D8C1AA;"></div>
+                    <div class="product-col" style="background: #EED53A"></div><span>+5</span>
+                </div>
+                <div class="product-price" data-sort="332">332 $</div>
+                <a href="" class="prodact-basket"><img src="img/nav_basket.svg" alt=""><span class="text">В корзину</span></a>
+            </div>
+            </div>
+            <div class="main-catalog_prodact">
+                <div class="main-catalogHeart">
+                    <img src="img/heart_prodact.svg" alt="">
+                    <img src="img/Group.svg" alt="">
+                </div>
+                <img src="img/product_Шпагат_джутовый_Сибшнур_500м.png" alt="" class="prodact-foto">
+                <div class="position">
+                <a href="">Шпагат джутовый Сибшнур 500 м</a>
+                <div class="product-color">
+                    <div class="product-col" style="background: #B69882;"></div> 
+                    <div class="product-col" style="background: #CFBBAC;"></div>
+                    <div class="product-col" style="background: #9D856B"></div>
+                </div>
+                <div class="product-price" data-sort="385">385 $</div>
+                <a href="" class="prodact-basket"><img src="img/nav_basket.svg" alt=""><span class="text">В корзину</span></a>
+            </div>
+            </div>
+            <div class="main-catalog_prodact">
+                <div class="main-catalogHeart">
+                    <img src="img/heart_prodact.svg" alt="">
+                    <img src="img/Group.svg" alt="">
+                </div>
+                <img src="img/product_product_Пряжа_Arachna_Macrame_MAXI.png" alt="" class="prodact-foto">
+                <div class="position">
+                <a href="card.html">Пряжа Arachna "Macrame MAXI"</a>
+                <div class="product-color">
+                    <div class="product-col" style="background: #FAF9F6;"></div> 
+                    <div class="product-col" style="background:#EBD5BC;"></div>
+                    <div class="product-col" style="background: #0395AF;"></div>
+                    <div class="product-col" style="background: #F09482;"></div><span>+2</span>
+                </div>
+                <div class="product-price" data-sort="1092">1092 $</div>
+                <a href="" class="prodact-basket"><img src="img/nav_basket.svg" alt=""><span class="text">В корзину</span></a>
+            </div>
+            </div>
+            <div class="main-catalog_prodact">
+                <div class="main-catalogHeart">
+                    <img src="img/heart_prodact.svg" alt="">
+                    <img src="img/Group.svg" alt="">
+                </div>
+                <img src="img/product_Пряжа_Arachna_Macrame_MINI.png" alt="" class="prodact-foto">
+                <div class="position">
+                <a href="card.html">Пряжа Arachna "Macrame MINI"</a>
+                <div class="product-color">
+                    <div class="product-col" style="background: #FAF9F6;"></div> 
+                    <div class="product-col" style="background: #EBD5BC;"></div>
+                    <div class="product-col" style="background:#0395AF;"></div>
+                    <div class="product-col" style="background: #F09482;"></div><span>+2</span>
+                </div>
+                <div class="product-price" data-sort="385">385 $</div>
+                <a href="" class="prodact-basket"><img src="img/nav_basket.svg" alt=""><span class="text">В корзину</span></a>
+            </div>
+            </div>
+            <div class="main-catalog_prodact">
+                <div class="main-catalogHeart">
+                    <img src="img/heart_prodact.svg" alt="">
+                    <img src="img/Group.svg" alt="">
+                </div>
+                <img src="img/product_Шнур_Gamma_0.8мм_50м.png" alt="" style="margin: 20px 0;" class="prodact-foto">
+                <div class="position">
+                <a href="card.html">Шнур "Gamma" 0.8 мм, 50 м</a>
+                <div class="product-color">
+                    <div class="product-col" style="background:#E5D8CB"></div> 
+                    <div class="product-col" style="background:#C51212"></div>
+                    <div class="product-col" style="background:#FC9257"></div>
+                    <div class="product-col" style="background: #1C1C1C"></div><span>+4</span>
+                </div>
+                <div class="product-price" data-sort="852">852 $</div>
+                <a href="" class="prodact-basket"><img src="img/nav_basket.svg" alt=""><span class="text">В корзину</span></a>
+            </div>
+            </div>
+            <div class="main-catalog_prodact">
+                <div class="main-catalogHeart">
+                    <img src="img/heart_prodact.svg" alt="">
+                    <img src="img/Group.svg" alt="">
+                </div>
+                <img src="img/product_Веревка_“Zефирка”_4 мм_100м.png" alt="" class="prodact-foto">
+                <div class="position">
+                <a href="card.html">Веревка “Zефирка” 4 мм, 100 м</a>
+                <div class="product-color">
+                    <div class="product-col" style="background:#FCF7F4;"></div> 
+                    <div class="product-col" style="background:#FAF0E2;"></div>
+                    <div class="product-col" style="background:#F24135;"></div>
+                    <div class="product-col" style="background: #0395AF;"></div><span>+1</span>
+                </div>
+                <div class="product-price" data-sort="617">617 $</div>
+                <a href="" class="prodact-basket"><img src="img/nav_basket.svg" alt=""><span class="text">В корзину</span></a>
+            </div>
+            </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>  
+</body>
+</html>
