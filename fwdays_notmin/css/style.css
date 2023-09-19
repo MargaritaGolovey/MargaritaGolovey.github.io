@@ -233,11 +233,13 @@ ul {
 }
 
 .events__box {
+  position: relative;
   display: flex;
   flex-direction: row;
   margin: 0 -16px;
   flex-wrap: wrap;
   margin-top: 40px;
+  z-index: -1;
 }
 
 .event-card {
@@ -753,7 +755,11 @@ ul {
   max-width: 935px;
   padding: 32px;
   text-align: left;
-  display: none;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .speaker-popup {
@@ -787,6 +793,12 @@ ul {
 .speaker-popup__info {
   margin-top: 15px;
   max-width: 468px;
+}
+.speaker-popup__info a{
+  color: #3F8FAA;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #B2D2DD;
+
 }
 
 .static-styles ul {
@@ -846,14 +858,14 @@ ul {
 }
 
 .static-styles .like-btn__action {
-  border-bottom: 1px dashed rgba(0, 145, 173, 0.4);
-  color: #0091ad;
+  border-bottom: 1px dashed #B2D2DD;
+  color: #3F8FAA;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 12px;
-  line-height: 17px;
+  line-height: 7px;
   flex-shrink: 0;
 }
 
@@ -961,10 +973,19 @@ ul {
 
 .remodal-close--circle {
   top: 18px;
-  left: 99%;
+  left: 90%;
   right: 18px;
   width: 54px;
   height: 54px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.56);
+  transition: all .6s;
+  display: none;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -1202,7 +1223,7 @@ ul {
   }
   .mentors {
     margin-top: 60px;
-  }
+   }
   .questions-list {
     padding-right: 0;
   }

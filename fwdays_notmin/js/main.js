@@ -1,5 +1,7 @@
 const list = document.querySelectorAll(".questions__icon");
 const mentors = document.querySelectorAll(".mentor__item_name");
+const overlay=document.querySelector('.overlay');
+const close=document.querySelector('.remodal-close ');
 
 list.forEach((item) => {
   item.addEventListener("click", function (e) {
@@ -28,3 +30,11 @@ list.forEach((item) => {
     }
   });
 });
+mentors.forEach(item=>{
+  item.addEventListener('click', function(e){
+    overlay.style.display="block";
+  })
+})
+close.addEventListener('click', function(){
+  overlay.style.display="none";
+})
