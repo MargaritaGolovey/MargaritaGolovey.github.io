@@ -74,7 +74,6 @@ ul {
 }
 
 .header {
-  height: 75px;
   border-bottom: 1px solid #dae3e9;
 }
 
@@ -115,9 +114,11 @@ ul {
 .header-nav__item {
   margin-right: 30px;
 }
-.header-nav__item:hover {
+
+.header-nav__item a:hover {
   color: #0091AD;
   border-bottom: 1px solid #0091AD;
+  padding-bottom: 10px;
 }
 
 .header-nav__link {
@@ -992,6 +993,7 @@ ul {
   .header {
     padding: 10px 0;
     height: auto;
+    border-bottom: none;
   }
   .header .container {
     align-items: flex-end;
@@ -1061,6 +1063,7 @@ ul {
   }
 }
 @media only screen and (max-width: 1023px) {
+
   .event-card {
     padding: 0 12px;
     height: 188px;
@@ -1263,7 +1266,53 @@ ul {
     margin-top: 18px;
     flex-direction: column;
   }
+  .overlay{
+    position: absolute;
+  }
+  
+  .remodal-close--circle {
+    top: 2px;
+    left: 82%;
+  }
+  .remodal {
+    margin-bottom: 0;
+    vertical-align: top;
 }
+.remodal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: inherit;
+}
+.icon-close:after, .icon-close:before{
+  height: 22px;
+}
+.static-styles .review-speaker__info ul li, .static-styles .speaker-popup__info ul li {
+  font-size: 12px;
+  line-height: 16px;
+}
+.speaker-popup {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: -32px -32px 0;
+  padding-bottom: 5px;
+}
+.speaker-popup__photo {
+  width: 100%;
+  height: auto;
+  max-width: 414px;
+  margin: 0 auto;
+}
+.speaker-popup__description {
+    margin: 22px 32px 0;
+}
+.report-popup {
+  margin-top: 0;
+}
+}
+
 @media only screen and (max-width: 576px) {
   .header__right {
     top: 20px;
@@ -1427,6 +1476,13 @@ ul {
   }
   .header-nav__link {
     font-size: 9px;
+  }
+  .header__right{
+    right: 1%;
+    gap: 5px;
+  }
+  .header-nav__item a{
+    letter-spacing: 0;
   }
   .more-link {
     font-size: 12px;
