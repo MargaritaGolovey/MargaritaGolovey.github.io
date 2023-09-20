@@ -1,16 +1,4 @@
 @charset "UTF-8";
-* {
-  list-style-type: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Gotham Pro", sans-serif;
-}
-
-body, h2, p {
-  margin: 0;
-  font-weight: 400;
-}
-
 @font-face {
   font-family: "Gotham Pro";
   src: url("../font/GothamPro.woff") format("woff");
@@ -31,6 +19,34 @@ body, h2, p {
   font-family: "YouTubeSansDark-Medium";
   src: url("../font/YouTubeSansDark-Medium.woff");
 }
+@font-face {
+  font-family: 'FwDaysFont';
+  src: url('../font/FwDaysFont-Regular.woff');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'FwDaysFont';
+  src: url('../font/FwDaysFont-Medium.woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'FwDaysFont';
+  src: url('../font/FwDaysFont-Bold.woff');
+  font-weight: 700;
+}
+* {
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "FwDaysFont", sans-serif;
+}
+
+body, h2, p {
+  margin: 0;
+  font-weight: 400;
+}
+
+
 ul {
   margin: 0;
   padding: 0;
@@ -115,10 +131,13 @@ ul {
   margin-right: 30px;
 }
 
-.header-nav__item a:hover {
-  color: #0091AD;
-  border-bottom: 1px solid #0091AD;
-  padding-bottom: 10px;
+.header-nav__item a:hover, .header__language:hover {
+  color: #0091AD;  
+  border-color: #0091AD;
+}
+.header__language:hover{
+  background-color: 		rgb(169,169,169);
+  color: #000000; 
 }
 
 .header-nav__link {
@@ -209,7 +228,6 @@ ul {
 }
 
 .home {
-  margin-top: 30px;
   height: 519px;
   background: url("../img/bg/main_bg.jpg") center center/cover no-repeat;
 }
@@ -286,7 +304,7 @@ ul {
 
 .h2 {
   margin-bottom: 26px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 26px;
   line-height: 32px;
 }
@@ -295,6 +313,7 @@ ul {
   color: #fff;
   font-size: 18px;
   line-height: 18px;
+  font-weight: 300;
 }
 
 .event-card__action {
@@ -350,10 +369,12 @@ ul {
   color: #fff;
   font-weight: 300;
 }
+.event-card__info{
+  letter-spacing: 1px;
+}
 
 .video {
   margin-top: 80px;
-  margin-bottom: 100px;
 }
 .video-list__items {
   margin-top: 40px;
@@ -909,7 +930,6 @@ ul {
 .remodal-close {
   position: absolute;
   top: 0;
-  left: 0;
   display: block;
   overflow: visible;
   width: 35px;
@@ -919,7 +939,6 @@ ul {
   cursor: pointer;
   transition: color 0.2s;
   text-decoration: none;
-  /* color: #95979c; */
   border: 0;
   outline: 0;
   background: 0 0;
@@ -974,7 +993,6 @@ ul {
 
 .remodal-close--circle {
   top: 18px;
-  left: 90%;
   right: 18px;
   width: 54px;
   height: 54px;
@@ -1044,6 +1062,9 @@ ul {
   .header-nav__link-mobile {
     display: none;
   }
+  .video-row__description {
+  margin-right: 46px;
+}
   footer {
     margin-top: 0;
   }
@@ -1083,6 +1104,7 @@ ul {
   .event-card__date {
     font-size: 14px;
     line-height: 16px;
+    font-weight: 300;
   }
   .size-card__btn {
     width: 194px;
@@ -1172,7 +1194,7 @@ ul {
   .home__box {
     background: inherit;
     height: auto;
-    padding: 0 15px;
+    padding: 20px 15px 0;
   }
   .home__description {
     color: #000000;
@@ -1225,8 +1247,11 @@ ul {
     max-width: 100%;
   }
   .mentors {
-    margin-top: 60px;
+    margin-top: 30px;
    }
+   .questions {
+    margin-top: 60px;
+}
   .questions-list {
     padding-right: 0;
   }
@@ -1272,7 +1297,6 @@ ul {
   
   .remodal-close--circle {
     top: 2px;
-    left: 82%;
   }
   .remodal {
     margin-bottom: 0;
@@ -1290,6 +1314,14 @@ ul {
 .static-styles .review-speaker__info ul li, .static-styles .speaker-popup__info ul li {
   font-size: 12px;
   line-height: 16px;
+}
+.static-styles p {
+  font-size: 16px;
+  line-height: 21px;
+}
+.static-styles .report-popup__title {
+  font-weight: 700;
+  font-size: 21px;
 }
 .speaker-popup {
   -webkit-box-orient: vertical;
@@ -1375,7 +1407,7 @@ ul {
     font-size: 12px;
   }
   .video-list__items {
-    margin-top: 26px;
+    margin-top: 6px;
   }
   .advantages-list__title {
     font-size: 16px;
@@ -1430,6 +1462,7 @@ ul {
     width: 26px;
     height: 26px;
     padding: 10px 6px;
+    margin-top: -3px;
   }
   .questions-list__item {
     display: flex;
@@ -1469,6 +1502,9 @@ ul {
     align-items: flex-start;
     gap: 20px;
   }
+  .overlay{
+    height: 673%;
+  }
 }
 @media only screen and (max-width: 470px) {
   .container {
@@ -1488,6 +1524,9 @@ ul {
     font-size: 12px;
     line-height: 10px;
     margin-left: 16px;
+  }
+   .home__box {
+    padding-top: 10px;
   }
   .event-card__photo {
     width: 139px;
