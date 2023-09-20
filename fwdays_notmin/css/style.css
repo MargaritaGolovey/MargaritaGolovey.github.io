@@ -1241,6 +1241,10 @@ ul {
   .advantages {
     margin-top: 60px;
   }
+  .advantages-list {
+    justify-content: flex-start;
+    gap: 0;
+}
   .advantages-list__check {
     width: 56px;
     height: 56px;
