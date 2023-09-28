@@ -131,12 +131,12 @@ ul {
   margin-right: 30px;
 }
 
-.header-nav__item a:hover, .header__language:hover {
+.header-nav__item a:hover{
   color: #0091AD;  
   border-color: #0091AD;
 }
 .header__language:hover{
-  background-color: 		rgb(169,169,169);
+  background-color:rgb(169,169,169);
   color: #000000; 
 }
 
@@ -1302,10 +1302,12 @@ ul {
   }
   .overlay{
     position: absolute;
+    height: 833%;
   }
   
   .remodal-close--circle {
     top: 2px;
+    right: 0;
   }
   .remodal {
     margin-bottom: 0;
@@ -1368,6 +1370,14 @@ ul {
     background-color: transparent;
     font-size: 10px;
     margin-right: 0;
+  }
+  .header__language:hover{
+    background-color: white;
+    transform: scale(1.1);
+    color: #000000; 
+  }
+  .header .social__item:hover{
+    transform: scale(1.1);
   }
   .logo__img {
     width: 140px;
