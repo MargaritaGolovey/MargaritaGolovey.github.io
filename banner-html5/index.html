@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=300,height=250,initial-scale=1">
+<meta name="ad.size" content="width=300,height=250">
+
+<title>Black Friday Banner</title>
+
+<style>
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 300px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: #050505;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   BANNER
+   ========================================================= */
+
+.banner {
+    position: relative;
+
+    width: 300px;
+    height: 250px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(155, 15, 42, 0.48) 0%,
+            rgba(155, 15, 42, 0.15) 32%,
+            transparent 65%
+        ),
+        radial-gradient(
+            circle at 8% 10%,
+            rgba(100, 10, 30, 0.30),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #020202 0%,
+            #120507 52%,
+            #050505 100%
+        );
+
+    touch-action: manipulation;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+   ========================================================= */
+
+.backgroundGlow {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -45px;
+    bottom: -45px;
+
+    border-radius: 50%;
+
+    background: rgba(150, 15, 43, 0.42);
+
+    filter: blur(42px);
+
+    animation: backgroundPulse 4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+.backgroundGlowSmall {
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    left: -50px;
+    top: -50px;
+
+    border-radius: 50%;
+
+    background: rgba(120, 10, 35, 0.25);
+
+    filter: blur(35px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PREMIUM GOLD LIGHT
+   ========================================================= */
+
+.premiumLight {
+    position: absolute;
+
+    width: 95px;
+    height: 95px;
+
+    right: 8px;
+    bottom: 18px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 210, 105, 0.34) 0%,
+            rgba(218, 170, 65, 0.18) 22%,
+            rgba(160, 20, 45, 0.12) 48%,
+            transparent 72%
+        );
+
+    filter: blur(8px);
+
+    opacity: 0.75;
+
+    z-index: 2;
+
+    animation: premiumLightPulse 3.8s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LIGHT RAY
+   ========================================================= */
+
+.lightRay {
+    position: absolute;
+
+    width: 120px;
+    height: 1px;
+
+    right: -25px;
+    bottom: 62px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(235, 195, 105, 0.55),
+            transparent
+        );
+
+    transform: rotate(-22deg);
+
+    opacity: 0.5;
+
+    z-index: 2;
+
+    animation: lightRayPulse 3.8s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GOLD ACCENT
+   ========================================================= */
+
+.goldAccent {
+    position: absolute;
+
+    left: 15px;
+    top: 13px;
+
+    width: 62px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e5b95f,
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.textContent {
+    position: absolute;
+
+    left: 15px;
+    top: 22px;
+
+    width: 148px;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SMALL HEADING
+   ========================================================= */
+
+.smallHeading {
+    margin: 0 0 20px;
+
+    color: #dfb35a;
+
+    font-size: 8px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.mainHeading {
+    margin: 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-size: 29px;
+    line-height: 0.88;
+
+    font-weight: 900;
+
+    letter-spacing: -1.4px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.mainHeading span {
+    display: block;
+}
+
+.mainHeading .goldText {
+    color: #e4b95f;
+
+    text-shadow:
+        0 0 15px rgba(228, 185, 95, 0.20);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description {
+    margin-top: 9px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* =========================================================
+   GOLD HEART
+   ========================================================= */
+
+.goldHeart {
+    display: inline-block;
+
+    color: #e4b95f;
+
+    text-shadow:
+        0 0 6px rgba(228, 185, 95, 0.45),
+        0 0 12px rgba(228, 185, 95, 0.20);
+
+    transform-origin: center;
+
+    animation: heartPulse 1.6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PRODUCT AREA
+   ========================================================= */
+
+.productArea {
+    position: absolute;
+
+    right: -5px;
+    top: 52px;
+
+    width: 180px;
+    height: 170px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PRODUCT GLOW
+   ========================================================= */
+
+.productGlow {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: 12px;
+    top: 14px;
+
+    border-radius: 50%;
+
+    background: rgba(150, 18, 43, 0.45);
+
+    filter: blur(31px);
+
+    animation: productGlowPulse 4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.productImage {
+    position: absolute;
+
+    width: 168px;
+    height: 145px;
+
+    right: -1px;
+    top: 0;
+
+    object-fit: contain;
+
+    z-index: 3;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    filter:
+        drop-shadow(
+            0 18px 15px rgba(0, 0, 0, 0.72)
+        )
+        drop-shadow(
+            0 0 15px rgba(150, 20, 45, 0.28)
+        );
+
+    animation: bagUpDown 3.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   DECORATIVE LIGHT
+   ========================================================= */
+
+.lightAccent {
+    position: absolute;
+
+    width: 78px;
+    height: 1px;
+
+    right: 5px;
+    top: 43px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(224, 176, 80, 0.72),
+            transparent
+        );
+
+    transform: rotate(-13deg);
+
+    opacity: 0.6;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.callToAction {
+    position: absolute;
+
+    left: 15px;
+    bottom: 56px;
+
+    width: 108px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d6a94d 0%,
+            #f1d17a 100%
+        );
+
+    color: #140b04;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 7px 22px rgba(210, 157, 48, 0.30);
+
+    z-index: 30;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CTA ARROW
+   ========================================================= */
+
+.callToAction::after {
+    content: "→";
+
+    margin-left: 7px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes bagUpDown {
+
+    0%,
+    100% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes productGlowPulse {
+
+    0%,
+    100% {
+        opacity: 0.42;
+        transform: scale(0.94);
+    }
+
+    50% {
+        opacity: 0.76;
+        transform: scale(1.07);
+    }
+}
+
+
+@keyframes premiumLightPulse {
+
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(0.88);
+    }
+
+    50% {
+        opacity: 0.95;
+        transform: scale(1.12);
+    }
+}
+
+
+@keyframes lightRayPulse {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform:
+            rotate(-22deg)
+            scaleX(0.8);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform:
+            rotate(-22deg)
+            scaleX(1.1);
+    }
+}
+
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.28);
+    }
+}
+
+
+@keyframes backgroundPulse {
+
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(0.94);
+    }
+
+    50% {
+        opacity: 0.75;
+        transform: scale(1.07);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .productImage,
+    .productGlow,
+    .backgroundGlow,
+    .premiumLight,
+    .lightRay,
+    .goldHeart {
+        animation: none !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div
+    class="banner"
+    id="banner"
+    role="button"
+    tabindex="0"
+    aria-label="Black Friday — время выгодных покупок"
+>
+
+    <div class="backgroundGlow"></div>
+    <div class="backgroundGlowSmall"></div>
+
+    <div class="premiumLight"></div>
+    <div class="lightRay"></div>
+
+    <div class="goldAccent"></div>
+    <div class="lightAccent"></div>
+
+
+    <!-- TEXT -->
+
+    <div class="textContent">
+
+        <h2 class="smallHeading">
+            BLACK FRIDAY
+        </h2>
+
+        <h1 class="mainHeading">
+            <span>BLACK</span>
+            <span class="goldText">FRIDAY</span>
+        </h1>
+
+        <div class="description">
+            Время выгодных<br>
+            покупок! <span class="goldHeart">♥</span>
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCT -->
+
+    <div class="productArea">
+
+        <div class="productGlow"></div>
+
+        <img
+            class="productImage"
+            src="images/SZN8.png"
+            alt="Сумка SZN8"
+            draggable="false"
+        >
+
+    </div>
+
+
+    <!-- CTA -->
+
+    <div class="callToAction">
+        КУПИТЬ
+    </div>
+
+</div>
+
+
+<script>
+
+(function () {
+
+    "use strict";
+
+    const banner = document.getElementById("banner");
+
+    /*
+     * Рекламная система может передать clickTag.
+     * Если clickTag отсутствует, используется fallback.
+     */
+    const clickTag =
+        window.clickTag ||
+        "https://example.com/";
+
+
+    function handleClick() {
+
+        /*
+         * Internal tracking event.
+         */
+        try {
+
+            window.dispatchEvent(
+                new CustomEvent("bannerClick", {
+                    detail: {
+                        campaign: "black-friday",
+                        creative: "premium-300x250",
+                        product: "SZN8"
+                    }
+                })
+            );
+
+        } catch (error) {
+
+            /*
+             * Tracking никогда не должен ломать рекламу.
+             */
+
+        }
+
+
+        /*
+         * Click-through.
+         */
+        if (!clickTag) {
+            return;
+        }
+
+        window.open(
+            clickTag,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    }
+
+
+    /*
+     * Mouse / touch / pointer.
+     */
+    banner.addEventListener(
+        "click",
+        handleClick
+    );
+
+
+    /*
+     * Keyboard accessibility.
+     */
+    banner.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                handleClick();
+
+            }
+
+        }
+    );
+
+})();
+
+</script>
+
+</body>
+</html>
+```
